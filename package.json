@@ -17,7 +17,11 @@
     "simple-youtube-api": "^5.1.1",
     "ytdl-core": "^0.28.3",
     "request": "^2.88.0",
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.1",
+    "fortnitetracker-7days-stats": "^3.1.1",
+    "weather-js": "^2.0.0",
+    "chance": "^1.0.18",
+    "common-tags": "^1.8.0"
   },
   "engines": {
     "node": "8.x"
