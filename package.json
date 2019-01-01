@@ -10,7 +10,14 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "discord.js": "^11.4.2",
+    "jimp": "^0.6.0",
+    "moment": "^2.23.0",
+    "simple-youtube-api": "^5.1.1",
+    "ytdl-core": "^0.28.3",
+    "request": "^2.88.0",
+    "chalk": "^2.4.1"
   },
   "engines": {
     "node": "8.x"
