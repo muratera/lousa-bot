@@ -87,7 +87,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === '<@387968413013901313>') {
+  if (msg.content.toLowerCase() === '<@320873010972196879>') {
     msg.reply('**Bana yaz özelden,  iletirim ben ona.**');
   }
 });
