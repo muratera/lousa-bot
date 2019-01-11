@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
     message.delete();
     const embed = new Discord.RichEmbed()
         .setTitle("» Rosemary | Sunucu Tanıt")
-        .setDescription("**Sunucu tanıtılmıştır. https://discord.gg/ab6eue4 tıklayarak sunucunu tanıttığın sunucuya katılabilirsin.**")
+        .setDescription("**Sunucu tanıtılmıştır. https://discord.gg/zKXnTDP tıklayarak sunucunu tanıttığın sunucuya katılabilirsin.**")
         .setFooter(" Righter 2018")
     message.channel.send(embed)
     const invite = new Discord.RichEmbed()
