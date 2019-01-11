@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embed = new Discord.RichEmbed()
   .setDescription('')
   .setColor(0x00ffff)
-  .addField("**》 Yapımcım 《**", `<@387968413013901313>`)
+  .addField("**》 Yapımcım 《**", `<@320873010972196879>`)
 
  
   return message.channel.sendEmbed(embed);
