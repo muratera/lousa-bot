@@ -21,7 +21,8 @@
     "fortnitetracker-7days-stats": "^3.1.1",
     "weather-js": "^2.0.0",
     "chance": "^1.0.18",
-    "common-tags": "^1.8.0"
+    "common-tags": "^1.8.0",
+    "quick.db": "^6.3.2"
   },
   "engines": {
     "node": "8.x"
