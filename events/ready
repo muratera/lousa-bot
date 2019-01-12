@@ -12,7 +12,7 @@ module.exports = client => {
    var oyun = [
         "+yardım | 7/24 aktif !",
         "+kurulum ile yazı kanallarını kolay şekilde kurabilirsiniz",
-       // "Müzik komutları | Çal çal oyna",
+        "Müzik komutları | Çal çal oyna",
         "Yapımcım: Emirhan Cem",
         "+sunucutanıt Komutu İle Sunucunuzu Tanıta Bilirsiniz",
         "HER ZAMAN HER YERDE DAHA İLERİYE",
