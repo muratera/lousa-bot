@@ -64,6 +64,11 @@ client.load = command => {
   });
 };
 
+setInterval(function() { 
+var avatars = [`https://i.hizliresim.com/QLQ97y.png`, `https://i.hizliresim.com/XMd5X3.png`, `https://i.hizliresim.com/bVyWGZ.png`, `https://i.hizliresim.com/dvXRGD.png`, `https://i.hizliresim.com/5aYBQz.png`]; 
+client.user.setAvatar(avatars[Math.floor(Math.random() * avatars.length)]);
+}, 600000);
+
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
