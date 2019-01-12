@@ -92,6 +92,15 @@ client.on('message', msg => {
   }
 });
 
+// Giriş-Çıkış DM bildirimi kodu başlangıç
+client.on('guildMemberAdd', guest => { // "guildMemberAdd" modülünü "guest" olarak kullanması için ayıran kısım.
+      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucuya gelince o kişiye DM'den haber atan kısım.
+}); 
+
+client.on('guildMemberRemove', guest => { // "guildMemberRemove" modülünü "guest" olarak kullanması için ayıran kısım.
+      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucudan gidince o kişiye DM'den haber atan kısım.
+}); 
+// Giriş-Çıkış DM bildirimi kodu sonu
 
 client.on("message", async message => {
   var user = message.mentions.users.first() || message.author;
