@@ -10,17 +10,17 @@ module.exports = client => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} ismi ile giriş yapıldı! BOT aktif!`);
   client.user.setStatus("online");
    var oyun = [
-        "+yardım | 7/24 aktif !",
+        "💪+yardım | 7/24 aktif !",
         "👍+kurulum ile yazı kanallarını kolay şekilde kurabilirsiniz",
         "🎵Müzik komutları | Çal çal oyna ",
         "Yapımcım: Emirhan Cem",
         "💪+sunucutanıt Komutu İle Sunucunuzu Tanıta Bilirsiniz",
-        "HER ZAMAN HER YERDE DAHA İLERİYE",
+        "💡HER ZAMAN HER YERDE DAHA İLERİYE",
         "+yardım | +davet",
-        "+davet yaz ve bize destek ol!",
+        "👉🏼+davet yaz ve bize destek ol!",
      
-        `$🙎🏼‍♂️{client.users.size} kullanıcı`,
-        `$🙏🏼{client.guilds.size} sunucu`
+        `🙎${client.users.size} kullanıcı`,
+        `🙏${client.guilds.size} sunucu`
 
     ];
 
