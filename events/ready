@@ -19,8 +19,8 @@ module.exports = client => {
         "+yardım | +davet",
         "👉🏼+davet yaz ve bize destek ol!",
      
-        `🙎${client.users.size} kullanıcı`,
-        `🙏${client.guilds.size} sunucu`
+        `${client.users.size} Kullanıcıyla İlgileniyorum`,
+        `${client.guilds.size} Sunucuda Bulunuyorum`
 
     ];
 
