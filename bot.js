@@ -65,9 +65,9 @@ client.load = command => {
 };
 
 setInterval(function() { 
-var avatars = [`https://cdn.discordapp.com/attachments/533441841542987799/534059675209957396/5.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059678452416564/1.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059679832211466/2.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059681044496396/3.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059681782693889/4.jpg`]; 
+var avatars = [`https://img.webme.com/pic/s/siderbot/5.png`, `https://img.webme.com/pic/s/siderbot/4.png`, `https://img.webme.com/pic/s/siderbot/3.png`, `https://img.webme.com/pic/s/siderbot/2.png`, `https://img.webme.com/vorschau/s/siderbot/1.png`]; 
 client.user.setAvatar(avatars[Math.floor(Math.random() * avatars.length)]);
-}, 600000);
+}, 300000);
 
 client.unload = command => {
   return new Promise((resolve, reject) => {
