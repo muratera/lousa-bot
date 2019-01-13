@@ -65,7 +65,7 @@ client.load = command => {
 };
 
 setInterval(function() { 
-var avatars = [`https://i.hizliresim.com/QLQ97y.png`, `https://i.hizliresim.com/XMd5X3.png`, `https://i.hizliresim.com/bVyWGZ.png`, `https://i.hizliresim.com/dvXRGD.png`, `https://i.hizliresim.com/5aYBQz.png`]; 
+var avatars = [`https://cdn.discordapp.com/attachments/533441841542987799/534059675209957396/5.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059678452416564/1.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059679832211466/2.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059681044496396/3.jpg`, `https://cdn.discordapp.com/attachments/533441841542987799/534059681782693889/4.jpg`]; 
 client.user.setAvatar(avatars[Math.floor(Math.random() * avatars.length)]);
 }, 600000);
 
