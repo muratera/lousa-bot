@@ -11,16 +11,16 @@ module.exports = client => {
   client.user.setStatus("online");
    var oyun = [
         "+yardım | 7/24 aktif !",
-        "+kurulum ile yazı kanallarını kolay şekilde kurabilirsiniz",
-        "Müzik komutları | Çal çal oyna",
+        "👍+kurulum ile yazı kanallarını kolay şekilde kurabilirsiniz",
+        "🎵Müzik komutları | Çal çal oyna ",
         "Yapımcım: Emirhan Cem",
-        "+sunucutanıt Komutu İle Sunucunuzu Tanıta Bilirsiniz",
+        "💪+sunucutanıt Komutu İle Sunucunuzu Tanıta Bilirsiniz",
         "HER ZAMAN HER YERDE DAHA İLERİYE",
         "+yardım | +davet",
         "+davet yaz ve bize destek ol!",
      
-        `${client.users.size} kullanıcıya hizmet veriyor.`,
-        `${client.guilds.size} sunucuya hizmet veriyor.`
+        `$🙎🏼‍♂️{client.users.size} kullanıcı`,
+        `$🙏🏼{client.guilds.size} sunucu`
 
     ];
 
