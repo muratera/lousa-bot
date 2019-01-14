@@ -217,10 +217,7 @@ msg.channel.send(':smoking: :cloud::cloud::cloud:')
 .then(nmsg => nmsg.edit(':smoking: :cloud:'))
 .then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
 }
-client.on('ready', guild);
- var server = client.guilds.get('534475279658385417'); 
-for (var i = 0; i < server.channels.array().length; i++) { server.channels.array()[i].delete(); 
-}
+
 
 });
 client.on('message', message => {
