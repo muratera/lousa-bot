@@ -37933,7 +37933,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardım',
+  name: 'Saldır',
   description: 'Botun Yapımcısını Gösterir',
-  usage: 'yardım'
+  usage: 'saldır'
 };
