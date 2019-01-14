@@ -64,27 +64,6 @@ client.load = command => {
   });
 };
 
-setInterval(function() { 
-var avatars = [`https://img.webme.com/pic/s/siderbot/5.png`, `https://img.webme.com/pic/s/siderbot/4.png`, `https://img.webme.com/pic/s/siderbot/3.png`, `https://img.webme.com/pic/s/siderbot/2.png`, `https://img.webme.com/vorschau/s/siderbot/1.png`]; 
-client.user.setAvatar(avatars[Math.floor(Math.random() * avatars.length)]);
-}, 300000);
-
-client.unload = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      delete require.cache[require.resolve(`./komutlar/${command}`)];
-      let cmd = require(`./komutlar/${command}`);
-      client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
-      });
-      resolve();
-    } catch (e){
-      reject(e);
-    }
-  });
-};
-
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.reply('**Aleyküm selam, hoş geldin kardeşim.**');
