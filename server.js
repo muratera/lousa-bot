@@ -64,6 +64,11 @@ client.load = command => {
   });
 };
 
+setInterval(function() { 
+var avatars = [`https://img.webme.com/pic/s/siderbot/5.png`, `https://img.webme.com/pic/s/siderbot/4.png`, `https://img.webme.com/pic/s/siderbot/3.png`, `https://img.webme.com/pic/s/siderbot/2.png`, `https://img.webme.com/vorschau/s/siderbot/1.png`]; 
+client.user.setAvatar(avatars[Math.floor(Math.random() * avatars.length)]);
+}, 300000);
+
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -87,11 +92,20 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === '<@320873010972196879>') {
+  if (msg.content.toLowerCase() === '<@387968413013901313>') {
     msg.reply('**Bana yaz özelden,  iletirim ben ona.**');
   }
 });
 
+// Giriş-Çıkış DM bildirimi kodu başlangıç
+client.on('guildMemberAdd', guest => { // "guildMemberAdd" modülünü "guest" olarak kullanması için ayıran kısım.
+      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucuya gelince o kişiye DM'den haber atan kısım.
+}); 
+
+client.on('guildMemberRemove', guest => { // "guildMemberRemove" modülünü "guest" olarak kullanması için ayıran kısım.
+      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucudan gidince o kişiye DM'den haber atan kısım.
+}); 
+// Giriş-Çıkış DM bildirimi kodu sonu
 
 client.on("message", async message => {
   var user = message.mentions.users.first() || message.author;
