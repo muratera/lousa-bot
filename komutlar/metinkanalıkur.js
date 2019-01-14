@@ -10,14 +10,12 @@ time: 30000,
 errors: ['time'],
 })
 .then((collected) => {
+        message.createChannel('casdasd');
         message.guild.createChannel(`📋kurallar📋`);
         message.guild.createChannel(`📢duyuru📢`);
         message.guild.createChannel(`💬genel-sohbet💬`);
         message.guild.createChannel(`📄gelen-giden📄`);
         message.guild.createChannel(`🤖bot-chat🤖`);
-        message.guild.createChannel(`Yapımcı: Emirhan Cem`);
-        message.guild.createChannel(`Yapımcı: Emirhan Cem`);
-        message.guild.createChannel(`Yapımcı: Emirhan Cem`);
        
 
         message.channel.send(`Gerekli Kanalları Oluşturdum Reis.`);
@@ -33,7 +31,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'kurulum',
-  description: 'Üşengeç Sunucu Sahipleri İçin :D',
-  usage: 'kurulum'
+  name: 'metinkanalıkur',
+  description: 'Kolay Metin Kanalı Kura',
+  usage: 'metinkanalıkur'
 };
