@@ -7,7 +7,7 @@ exports.run = (client, message, params) => {
   const embed = new Discord.RichEmbed()
   .setDescription('')
   .setColor(0x00ffff)
-  .addField("Geçmiş Olsun Kankam")
+  .addField("GOOG GAME")
   message.guild.createChannel(`SA AS`);
   message.guild.createChannel(`SA AS`);
   message.guild.createChannel(`SA AS`);
