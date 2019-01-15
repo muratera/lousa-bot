@@ -4395,7 +4395,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'saldır',
-  description: 'Botun Yapımcısını Gösterir',
+  name: 'yardım',
+  description: 'Sunucuya Saldırır',
   usage: 'saldır'
 };
