@@ -29,6 +29,17 @@ fs.readdir('./komutlar/', (err, files) => {
   });
 });
 
+client.on("channelDelete", async channel => {
+    var logs = channel.guild.channels.find(c => c.name === 'mod-log');
+    if (!logs) return console.log("#mod-log Kanalı Bulunamadı!");
+    const cembed = new Discord.RichEmbed()
+        .setTitle("Kanal Silindi! ⚠")
+        .setColor("RANDOM")
+        .setDescription(`**${channel.name}** Kanalı Silindi ✖`)
+        .setTimestamp(new Date())
+    logs.send(cembed)
+});
+
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
