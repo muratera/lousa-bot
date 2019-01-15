@@ -13,7 +13,7 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('**Bot Link**: https://discordapp.com/oauth2/authorize?client_id=534424717197574159&scope=bot&permissions=1341652289*' );
+    .setDescription('**Bot Link**: https://discordapp.com/oauth2/authorize?client_id=534424717197574159&scope=bot&permissions=871890302*' );
     return message.author.sendEmbed(pingozel)
 };
 
