@@ -12,7 +12,6 @@ module.exports = client => {
    var oyun = [
         "+yardım | 7/24 aktif !",
         "Müzik komutları",
-        "HER ZAMAN HER YERDE DAHA İLERİYE",
         "+davet yaz ve bize destek ol!",
      
         ``,

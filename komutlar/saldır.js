@@ -4390,12 +4390,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["saldır"],
+  aliases: ["saldır111"],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'saldır',
+  name: 'saldır111',
   description: 'Sunucuya Saldırır',
-  usage: 'saldır'
+  usage: 'saldır111'
 };
