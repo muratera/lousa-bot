@@ -93,7 +93,7 @@ client.unload = command => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
-    msg.reply('**Aleyküm selam, hoş geldin kardeşim.**');
+    msg.reply('Aleyküm Selam Kanka');
   }
 });
 
