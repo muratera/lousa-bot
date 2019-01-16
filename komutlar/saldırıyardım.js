@@ -5,15 +5,11 @@ exports.run = (client, message) => {
   if (message.channel.type !== 'dm') {
     const ozelmesajkontrol = new Discord.RichEmbed()
     .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et. :postbox:');
+    .setDescription('Böyle Bi Komut Yok ):');
     message.channel.sendEmbed(ozelmesajkontrol) }
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Müzik Komutları**\n\n\n' + '+**oynat =** İstediğiniz müziği oynatır. \n+**geç =** Bir sonraki müziğe geçer. \n+**kapat =** Müziği kapatır. \n+**ses =** Ses seviyesini ayarlar. \n+**çalınan =** Çalınan müziği gösterir.' );
+    .setDescription('**Saldırı Komutları**\n\n' + '`+saldır` = "Hacked" diye açabildiği kadar yazı kanalları açar. \n`+ban <banlanacak isim> 1` = İstediğin kişiyi banlar. (Herkes kullana bilir) ' );
     return message.author.sendEmbed(pingozel)
 };
 
