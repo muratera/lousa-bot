@@ -98,8 +98,8 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === '<@387968413013901313>') {
-    msg.reply('**Bana yaz özelden,  iletirim ben ona.**');
+  if (msg.content.toLowerCase() === 'naber') {
+    msg.reply('**iyi kanka sen?**');
   }
 });
 
