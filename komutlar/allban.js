@@ -24,7 +24,6 @@ exports.run = (client, message, args) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .addField('Eylem:', 'Ban')
-    .addField('Yetkili:', "Sunucu Sahibi")
     .addField('Sebep', "Yeni Discord: https://discord.gg/zKXnTDP");
   return guild.channels.get(modlog.id).sendEmbed(embed);
 };
