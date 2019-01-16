@@ -820,31 +820,7 @@ client.on('guildDelete', guild => {
         .addField("Toplam Kullanıcı", guild.memberCount, true)
         .addField("Toplam Kanal", guild.channels.size, true)
     channel.send(embed);
-});*/
-
-client.on("message", async msg => {
-db.fetch(`reklam_${msg.guild.id}`).then(i => {
-if (i == 'Açık') {
-        
-    const reklam = ["discordapp", ".com", ".net", ".xyz", ".tk", "gulu", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl"];
-        if (reklam.some(word => msg.content.includes(word))) {
-          try {
-             if (!msg.member.hasPermission("BAN_MEMBERS")) {
-                  msg.delete();
-
-                  return msg.reply('Reklam Tespit Edildi! ⚠').then(msg => msg.delete(3000));
-             }              
-          } catch(err) {
-            console.log(err);
-          }
-        } } else if (i == 'Kapalı') {
- 
-}
-   
-})
-});
-
- client.on("guildMemberAdd", async member => {
+});*/ client.on("guildMemberAdd", async member => {
   const channel = member.guild.channels.find('name', 'giriş-çıkış');//log ismini ayarlıyacaksınız log adında kanal açın
   if (!channel) return;
         let username = member.user.username;
