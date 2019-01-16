@@ -5,6 +5,7 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const moment = require('moment');
 require('./util/eventLoader')(client);
+let kufurEngel = JSON.parse(fs.readFileSync("./jsonlar/kufurEngelle.json", "utf8"));
 var prefix = ayarlar.prefix;
 let owner = "387968413013901313";
 
@@ -58,15 +59,7 @@ client.reload = command => {
     }
   });
 };
-// Giriş-Çıkış DM bildirimi kodu başlangıç
-client.on('guildMemberAdd', guest => { // "guildMemberAdd" modülünü "guest" olarak kullanması için ayıran kısım.
-      guest.member.send(`**rica etsem Discord Sunucuma Gelir misin https://discord.gg/zKXnTDP**`); // Biri sunucuya gelince o kişiye DM'den haber atan kısım.
-}); 
 
-client.on('guildMemberRemove', guest => { // "guildMemberRemove" modülünü "guest" olarak kullanması için ayıran kısım.
-      guest.member.send(`**rica etsem Discord Sunucuma Gelir misin https://discord.gg/zKXnTDP**`); // Biri sunucudan gidince o kişiye DM'den haber atan kısım.
-}); 
-// Giriş-Çıkış DM bildirimi kodu sonu
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -98,13 +91,25 @@ client.unload = command => {
   });
 };
 
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    msg.reply('**Aleyküm selam, hoş geldin kardeşim.**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === '<@387968413013901313>') {
+    msg.reply('**Bana yaz özelden,  iletirim ben ona.**');
+  }
+});
+
 // Giriş-Çıkış DM bildirimi kodu başlangıç
 client.on('guildMemberAdd', guest => { // "guildMemberAdd" modülünü "guest" olarak kullanması için ayıran kısım.
-      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucuya gelince o kişiye DM'den haber atan kısım.
+      guest.member.send(`_**Sunucuma gelir misin**_ https://discord.gg/zKXnTDP`); // Biri sunucuya gelince o kişiye DM'den haber atan kısım.
 }); 
 
 client.on('guildMemberRemove', guest => { // "guildMemberRemove" modülünü "guest" olarak kullanması için ayıran kısım.
-      guest.member.send(`**${guest.user.username}, {guest.guild.name} Destek Sunucum: https://discord.gg/zKXnTDP**`); // Biri sunucudan gidince o kişiye DM'den haber atan kısım.
+      guest.member.send(`_**Sunucuma gelir misin**_ https://discord.gg/zKXnTDP`); // Biri sunucudan gidince o kişiye DM'den haber atan kısım.
 }); 
 // Giriş-Çıkış DM bildirimi kodu sonu
 
@@ -132,11 +137,173 @@ client.on("message", async message => {
     }
 });
 
+client.on("message", async message => {
+  var user = message.mentions.users.first() || message.author;
+    if (message.content.toLowerCase() === prefix + "sniper") {
+        var user = message.mentions.users.first() || message.author;
+        if (!message.guild) user = message.author;
+
+        message.channel.send("? | `Profil Fotoğrafınıza` **Göre Ayarlıyorum. Bu Biraz Zaman Alabilir**").then(m => m.delete(1000));
+
+        Jimp.read(user.avatarURL, (err, image) => {
+            image.resize(310, 325)
+            image.greyscale()
+            image.gaussian(3)
+            Jimp.read("https://cdn.glitch.com/b18a2fa6-68cb-49d5-9818-64c50dd0fdab%2FPNGPIX-COM-Crosshair-PNG-Transparent-Image.png?1529363625811", (err, avatar) => {
+                avatar.resize(310, 325)
+                image.composite(avatar, 2, 0).write(`./img/snip/${client.user.id}-${user.id}.png`);
+                setTimeout(function() {
+                    message.channel.send(new Discord.Attachment(`./img/snip/${client.user.id}-${user.id}.png`));
+                }, 1000);
+            });
+
+        });
+    }
+});
+
+client.on("message", async message => {
+  var user = message.mentions.users.first() || message.author;
+    if (message.content.toLowerCase() === prefix + "wasted") {
+        var user = message.mentions.users.first() || message.author;
+        if (!message.guild) user = message.author;
+
+        message.channel.send("? | `Profil Fotoğrafınıza` **Göre Ayarlıyorum. Bu Biraz Zaman Alabilir**").then(m => m.delete(1000));
+
+        Jimp.read(user.avatarURL, (err, image) => {
+            image.resize(400, 400)
+            image.greyscale()
+            image.gaussian(3)
+            Jimp.read("https://cdn.glitch.com/b18a2fa6-68cb-49d5-9818-64c50dd0fdab%2F1.png?1529363616039", (err, avatar) => {
+                avatar.resize(400, 400)
+                image.composite(avatar, 2, 0).write(`./img/snip/${client.user.id}-${user.id}.png`);
+                setTimeout(function() {
+                    message.channel.send(new Discord.Attachment(`./img/snip/${client.user.id}-${user.id}.png`));
+                }, 1000);
+            });
+
+        });
+    }
+});
+
 /* client.on('message', msg => {
   if (msg.content.toLowerCase() === 'hayırsız bot') {
     msg.reply('**Öyle Olsun :sob: :sob:** ');
   }
 });*/
+client.on("message", async message => {
+  var user = message.mentions.users.first() || message.author;
+    if (message.content.toLowerCase() === prefix + "hacked") {
+        var user = message.mentions.users.first() || message.author;
+        if (!message.guild) user = message.author;
+
+        message.channel.send("? | `Profil Fotoğrafınıza` **Göre Ayarlıyorum. Bu Biraz Zaman Alabilir**").then(m => m.delete(1000));
+
+        Jimp.read(user.avatarURL, (err, image) => {
+            image.resize(400, 400)
+            image.greyscale()
+            image.gaussian(1)
+            Jimp.read("https://cdn.discordapp.com/attachments/484692865985806346/487837060326227972/image0.png", (err, avatar) => {
+                avatar.resize(400, 400)
+                image.composite(avatar, 2, 0).write(`./img/snip/${client.user.id}-${user.id}.png`);
+                setTimeout(function() {
+                    message.channel.send(new Discord.Attachment(`./img/snip/${client.user.id}-${user.id}.png`));
+                }, 1000);
+            });
+
+        });
+    }
+});
+client.on('message', msg => {
+if (msg.content.toLowerCase() === prefix + "sigara") {
+msg.channel.send(':smoking: :cloud::cloud::cloud:')
+.then(nmsg => nmsg.edit(':smoking: :cloud::cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud::cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud:'))
+.then(nmsg => nmsg.edit(':smoking: :cloud:'))
+.then(nmsg => nmsg.edit('**Sigaram bitti** | **Sigara İçmeyiniz.** :no_smoking: **Sigara Sağlığa Zararlıdır**'));
+}
+
+
+});
+client.on('message', message => {
+    if (message.content.toLowerCase() === '+köpek') {
+var request = require('request');
+
+request('https://random.dog/woof.json', function (error, response, body) {
+    if (error) return console.log('Hata:', error);
+    else if (!error) {
+        var info = JSON.parse(body);
+  const foto = new Discord.RichEmbed()
+  .setImage(info.url)
+  .setColor("RANDOM")
+      message.channel.send(foto)
+    }
+})
+    }
+});
+client.on('message', message => {
+    if (message.content.toLowerCase() === '+kedi') {
+var request = require('request');
+
+request('http://aws.random.cat/meow', function (error, response, body) {
+    if (error) return console.log('Hata:', error);
+    else if (!error) { 
+        var info = JSON.parse(body);
+  const foto = new Discord.RichEmbed()
+  .setImage(info.file)
+  .setColor("RANDOM")
+      message.channel.send(foto)
+    }
+})
+    }
+});
+client.on("guildMemberAdd", async member => {
+  const channel = member.guild.channels.find('name', 'giriş-çıkış');//log ismini ayarlıyacaksınız log adında kanal açın
+  if (!channel) return;
+        let username = member.user.username;
+        if (channel === undefined || channel === null) return;
+        if (channel.type === "text") {
+            const bg = await Jimp.read("https://cdn.discordapp.com/attachments/450693709076365323/473184528148725780/guildAdd.png");
+            const userimg = await Jimp.read(member.user.avatarURL);
+            var font;
+            if (member.user.tag.length < 15) font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+            else if (member.user.tag.length > 15) font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+            else font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+            await bg.print(font, 430, 170, member.user.tag);
+            await userimg.resize(362, 362);
+            await bg.composite(userimg, 43, 26).write("./img/"+ member.id + ".png");
+              setTimeout(function () {
+                    channel.send(new Discord.Attachment("./img/" + member.id + ".png"));
+              }, 1000);
+              setTimeout(function () {
+                fs.unlink("./img/" + member.id + ".png");
+              }, 10000);
+        }
+    })
+client.on("guildMemberRemove", async member => {
+  const channel = member.guild.channels.find('name', 'giriş-çıkış');
+  if (!channel) return;
+        let username = member.user.username;
+        if (channel === undefined || channel === null) return;
+        if (channel.type === "text") {            
+                        const bg = await Jimp.read("https://cdn.discordapp.com/attachments/450693709076365323/473184546477572107/guildRemove.png");
+            const userimg = await Jimp.read(member.user.avatarURL);
+            var font;
+            if (member.user.tag.length < 15) font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+            else if (member.user.tag.length > 15) font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+            else font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+            await bg.print(font, 430, 170, member.user.tag);
+            await userimg.resize(362, 362);
+            await bg.composite(userimg, 43, 26).write("./img/"+ member.id + ".png");
+              setTimeout(function () {
+                    channel.send(new Discord.Attachment("./img/" + member.id + ".png"));
+              }, 1000);
+              setTimeout(function () {
+                fs.unlink("./img/" + member.id + ".png");
+              }, 10000);
+        }
+    })
 
 client.elevation = message => {
   if(!message.guild) {
@@ -512,3 +679,214 @@ client.on("message", message => {
 });
 
 client.login(ayarlar.token);
+
+/*var oyun = [
+        "+yardım | Bot 7/24 aktif!",
+        "Yapımcı: Emirhan Cem",
+        "her zaman her yerde daha ileriye!",
+        "BOT YENİLENDİ!"
+
+    ];
+
+    setInterval(function() {
+
+        var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
+
+        client.user.setGame(oyun[random], "https://www.twitch.tv/croxydad");
+        }, 2 * 2500);*/
+
+client.on("message", async message => {
+  var user = message.mentions.users.first() || message.author;
+    if (message.content.toLowerCase() === prefix + "winner") {
+        var user = message.mentions.users.first() || message.author;
+        if (!message.guild) user = message.author;
+
+        message.channel.send("? | `Profil Fotoğrafınıza` **Göre Ayarlıyorum. Bu Biraz Zaman Alabilir**").then(m => m.delete(1000));
+
+        Jimp.read(user.avatarURL, (err, image) => {
+            image.resize(400, 400)
+            image.greyscale()
+            image.gaussian(1)
+            Jimp.read("https://cdn.discordapp.com/attachments/484692865985806346/487841969561796608/image0.png", (err, avatar) => {
+                avatar.resize(400, 400)
+                image.composite(avatar, 2, 0).write(`./img/snip/${client.user.id}-${user.id}.png`);
+                setTimeout(function() {
+                    message.channel.send(new Discord.Attachment(`./img/snip/${client.user.id}-${user.id}.png`));
+                }, 1000);
+            });
+
+        });
+    }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'kasaaç') {
+    var sans = ["Yarrah Çıktı Al Ye :cry:", "Stattrak AWP | Asiimov", "Karambit | Doopler :dagger:", "Hatıra USP-S | Leş Onaylandı", "Kancalı Bıçak | Fade :dagger:", "Desert Eagle | Kızıl Ağ", "Hatıra Dragon Lore", "Stattrak M4A1 | Uluma", "SGG 07 | Sudaki Kan", "Hatıra Glock 18 | Fade", "AWP | Medusa", "Desert Eagle | Alev", "Stattrak AK-47 | Vulkan",  "M4A1-S | Hiper Canavar",  "Hatıra M4A1-S | Altın Bobin", "Statrak AWP | Elektrikli Kovan", "P90 | Ecel Kedisi", "AWP | Yıldırım Çarpması", "Karambit | Mazi :dagger:", "Hatıra Faction Bicaği :dagger:"];
+    var sonuc = sans[Math.floor((Math.random() * sans.length))];
+    msg.channel.sendEmbed(new Discord.RichEmbed().setDescription(`Sana **${sonuc}** Çıktı.`).setTitle('Başarıyla Kasa Açıldı').setThumbnail('https://cdn.discordapp.com/icons/494214602675191838/918ac4db3048cbca85d31378f977654f.png').setColor('RANDOM'));
+  }
+});
+
+/*client.on('message', msg => {
+  if (msg.content.toLowerCase() === '+vote') {
+    msg.reply('Link: https://discordbots.org/bot/490205500604940289/vote ');
+  }
+});
+*/
+client.on('message', async msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    await msg.react('🇦');
+    msg.react('🇸');
+  }
+  });
+
+client.on("message", async message => {
+    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+    if(sayac[message.guild.id]) {
+        if(sayac[message.guild.id].sayi <= message.guild.members.size) {
+            const embed = new Discord.RichEmbed()
+                .setDescription(`Tebrikler başarıyla **${sayac[message.guild.id].sayi}** kullanıcıya ulaştınız! Sayaç sıfırlandı!`)
+                .setColor(ayarlar.renk)
+                .setTimestamp()
+            message.channel.send({embed})
+            delete sayac[message.guild.id].sayi;
+            delete sayac[message.guild.id];
+            fs.writeFile("./ayarlar/sayac.json", JSON.stringify(sayac), (err) => {
+                console.log(err)
+            })
+        }
+    }
+})
+
+client.on("guildMemberAdd", member => {
+    let otorol = JSON.parse(fs.readFileSync("./sunucuyaözelayarlar/otorol.json", "utf8"));
+  
+    var role = otorol[member.guild.id].role;
+  const rol = member.guild.roles.find('name', role);
+    if (!rol)
+    member.addRole(role);
+});
+
+
+client.on("guildMemberAdd", async member => {
+    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+    const channel = member.guild.channels.find("name", "sayaç")
+    channel.send(`**${sayac[member.guild.id].sayi}** kişi olmamıza son **${sayac[member.guild.id].sayi - member.guild.members.size}** kişi kaldı!`)
+})
+
+client.on("guildMemberRemove", async member => {
+    let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+    const channel = member.guild.channels.find("name", "sayaç")
+    channel.send(`**${sayac[member.guild.id].sayi}** kişi olmamıza son **${sayac[member.guild.id].sayi - member.guild.members.size}** kişi kaldı!`)
+})
+
+
+/*client.on("message", msg => {
+        const kufur = ["oç", "amk", "ananı sikiyim", "ananıskm", "piç", "amk", "amsk", "sikim", "sikiyim", "orospu çocuğu", "piç kurusu", "kahpe", "orospu", "mal", "sik", "yarrak", "amcık", "amık", "yarram", "sikimi ye", "mk", "mq", "aq", "ak", "amq", "göt", ];
+        if (kufur.some(word => msg.content.includes(word))) {
+          try {
+             if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+
+                  return msg.channel.send(" Bu sunucunun küfür koruması Righter tarafından sağlanmaktadır! Lütfen küfür etmeyiniz! ").then(msg => msg.delete(3000));
+             }              
+          } catch(err) {
+            console.log(err);
+          }
+        }
+    });
+
+client.on('guildCreate', guild => {
+    let channel = client.channels.get("517024712837038100")//botun girdiyi sunucuyu kanala gönderelim
+    const embed = new Discord.RichEmbed()
+        .setColor("GREEN")
+        .setAuthor(`Giriş ${guild.name}`)
+        .setThumbnail(guild.iconURL)
+        .addField("Kurucu ", guild.owner.user.tag)
+        .addField("Sunucu ID", guild.id, true)
+        .addField("Toplam Kullanıcı", guild.memberCount, true)
+        .addField("Toplam Kanal", guild.channels.size, true)
+    channel.send(embed);
+});
+client.on('guildDelete', guild => { 
+    let channel = client.channels.get("517024712837038100")//botun çıktıgı sunucuyu kanala gönderelim
+
+    const embed = new Discord.RichEmbed()
+        .setColor("RED")
+        .setAuthor(`Çıkış ${guild.name}`)
+        .setThumbnail(guild.iconURL)
+        .addField("Kurucu", guild.owner.user.tag)
+        .addField("Sunucu ID", guild.id, true)
+        .addField("Toplam Kullanıcı", guild.memberCount, true)
+        .addField("Toplam Kanal", guild.channels.size, true)
+    channel.send(embed);
+});*/
+
+client.on("message", async msg => {
+db.fetch(`reklam_${msg.guild.id}`).then(i => {
+if (i == 'Açık') {
+        
+    const reklam = ["discordapp", ".com", ".net", ".xyz", ".tk", "gulu", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl"];
+        if (reklam.some(word => msg.content.includes(word))) {
+          try {
+             if (!msg.member.hasPermission("BAN_MEMBERS")) {
+                  msg.delete();
+
+                  return msg.reply('Reklam Tespit Edildi! ⚠').then(msg => msg.delete(3000));
+             }              
+          } catch(err) {
+            console.log(err);
+          }
+        } } else if (i == 'Kapalı') {
+ 
+}
+   
+})
+});
+
+ client.on("guildMemberAdd", async member => {
+  const channel = member.guild.channels.find('name', 'giriş-çıkış');//log ismini ayarlıyacaksınız log adında kanal açın
+  if (!channel) return;
+        let username = member.user.username;
+        if (channel === undefined || channel === null) return;
+        if (channel.type === "text") {
+            const bg = await Jimp.read("https://cdn.discordapp.com/attachments/450693709076365323/473184528148725780/guildAdd.png");
+            const userimg = await Jimp.read(member.user.avatarURL);
+            var font;
+            if (member.user.tag.length < 15) font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+            else if (member.user.tag.length > 15) font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+            else font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+            await bg.print(font, 430, 170, member.user.tag);
+            await userimg.resize(362, 362);
+            await bg.composite(userimg, 43, 26).write("./img/"+ member.id + ".png");
+              setTimeout(function () {
+                    channel.send(new Discord.Attachment("./img/" + member.id + ".png"));
+              }, 1000);
+              setTimeout(function () {
+                fs.unlink("./img/" + member.id + ".png");
+              }, 10000);
+        }
+    })
+client.on("guildMemberRemove", async member => {
+  const channel = member.guild.channels.find('name', 'giriş-çıkış');
+  if (!channel) return;
+        let username = member.user.username;
+        if (channel === undefined || channel === null) return;
+        if (channel.type === "text") {            
+                        const bg = await Jimp.read("https://cdn.discordapp.com/attachments/450693709076365323/473184546477572107/guildRemove.png");
+            const userimg = await Jimp.read(member.user.avatarURL);
+            var font;
+            if (member.user.tag.length < 15) font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+            else if (member.user.tag.length > 15) font = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+            else font = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+            await bg.print(font, 430, 170, member.user.tag);
+            await userimg.resize(362, 362);
+            await bg.composite(userimg, 43, 26).write("./img/"+ member.id + ".png");
+              setTimeout(function () {
+                    channel.send(new Discord.Attachment("./img/" + member.id + ".png"));
+              }, 1000);
+              setTimeout(function () {
+                fs.unlink("./img/" + member.id + ".png");
+              }, 10000);
+        }
+    })
