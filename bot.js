@@ -89,7 +89,7 @@ message.guild.createChannel(`🤜  Hoşgeldiniz  🤛`, 'voice')
     c.overwritePermissions(role, {
         CONNECT: true,
     });    
-    c.overwritePermissions(role3, {
+    c.overwritePermissions(role, {
         CONNECT: false,
     });
 })
