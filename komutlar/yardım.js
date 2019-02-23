@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
   let pages = [
-              '**Kurulum**\n\n\n ' + '+**genelsw =** Genel Sw Kurar +**oyunsw =** Oyun D Kurar',
+              '**Kurulum**\n\n\n ' + '+**genelsw =** Genel Discord Sunucusu Kurar \n+**oyunsw =** Oyun Discordu Sunucusu Kurar',
               ];
   let page = 1;
 
