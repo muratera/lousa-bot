@@ -396,34 +396,34 @@ message.guild.createChannel(`🤜  Hoşgeldiniz  🤛`, 'voice')
 
 message.guild.createChannel(`Duo 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Duo 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Duo 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Squad 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Squad 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Squad 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Kreatif 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Kreatif 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Kreatif 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 message.guild.createChannel(`Save The World`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Fortnite")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Fortnite")))
 
 
 
@@ -433,31 +433,31 @@ message.guild.createChannel(`Save The World`, 'voice')
 
 message.guild.createChannel(`Duo 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Duo 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Duo 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Squad 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Squad 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Squad 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Üçlü Squad 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Üçlü Squad 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 message.guild.createChannel(`Üçlü Squad 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Pubg")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Pubg")))
 
 
 
@@ -467,53 +467,53 @@ message.guild.createChannel(`Üçlü Squad 3`, 'voice')
 
 message.guild.createChannel(`Rekabetçi 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 message.guild.createChannel(`Rekabetçi 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 message.guild.createChannel(`Rekabetçi 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 message.guild.createChannel(`Yoldaş 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 message.guild.createChannel(`Yoldaş 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 message.guild.createChannel(`Yoldaş 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
  message.guild.createChannel(`Topluluk Sunucusu`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "CSGO")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》CSGO")))
 
 
 
-    message.guild.createChannel('Lol', 'category', [{
+    message.guild.createChannel('🎮》Lol', 'category', [{
   id: message.guild.id,
 }]);
 
 message.guild.createChannel(`Dereceli Maç 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 message.guild.createChannel(`Dereceli Maç 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 message.guild.createChannel(`Dereceli Maç 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 message.guild.createChannel(`Ranked Maç 1`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 message.guild.createChannel(`Ranked Maç 2`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 message.guild.createChannel(`Ranked Maç 3`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
  message.guild.createChannel(`Özel Oyun`, 'voice')
 .then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ channel.setParent(message.guild.channels.find(channel => channel.name === "🎮》Lol")))
 
 
 
