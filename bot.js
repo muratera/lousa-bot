@@ -267,85 +267,8 @@ message.guild.createChannel(`🎮》LOL`, 'voice')
     
 }
 });
-
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
-fs.readdir('./komutlar/', (err, files) => {
-  if (err) console.error(err);
-  log(`${files.length} komut yüklenecek.`);
-  files.forEach(f => {
-    let props = require(`./komutlar/${f}`);
-    log(`Yüklenen komut: ${props.help.name}.`);
-    client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help.name);
-    });
-  });
-});
-
-client.reload = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      delete require.cache[require.resolve(`./komutlar/${command}`)];
-      let cmd = require(`./komutlar/${command}`);
-      client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
-      });
-      client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
-      });
-      resolve();
-    } catch (e){
-      reject(e);
-    }
-  });
-};
-
-client.load = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      let cmd = require(`./komutlar/${command}`);
-      client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
-      });
-      resolve();
-    } catch (e){
-      reject(e);
-    }
-  });
-};
-
-client.unload = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      delete require.cache[require.resolve(`./komutlar/${command}`)];
-      let cmd = require(`./komutlar/${command}`);
-      client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
-      });
-      resolve();
-    } catch (e){
-      reject(e);
-    }
-  });
-};
-
-client.elevation = message => {
-  if(!message.guild) {
-	return; }
-  let permlvl = 0;
-  if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
-  if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (message.author.id === ayarlar.sahip) permlvl = 4;
-  return permlvl;
-};
-
 //////////////////////////////////////////
-////////////TURNUVA DİSCORD
+////////////TURNUVA 
 //////////////////////////////////////////
 
 client.on('message', async message => {
@@ -353,7 +276,7 @@ client.on('message', async message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   let u = message.mentions.users.first() || message.author;
-  if (command === "turnuvadc") {
+  if (command === "genelsw") {
   if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
   message.channel.send(`Kurulum Başladı`)
       if (!message.member.hasPermission('ADMINISTRATOR'))
@@ -365,26 +288,84 @@ client.on('message', async message => {
       })
 
 
-     message.guild.createChannel(`Genel`, 'text')
+
+        
+ message.guild.createChannel('📋kurallar📋', 'text', [{
+  id: message.guild.id,
+  deny: ['SEND_MESSAGES']
+}])
+            .then(channel => channel.setParent(message.guild.channels.find(channel => channel.name === "")));
+            message.guild.createChannel('📢duyuru📢', 'text', [{
+              id: message.guild.id,
+              deny: ['SEND_MESSAGES']
+            }])
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "")));
+             
+      message.guild.createChannel(`💬genel-sohbet💬`, 'text')
+     .then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "")));
+     message.guild.createChannel(`🤖bot-chat🤖`, 'text')
      .then(channel =>
             channel.setParent(message.guild.channels.find(channel => channel.name === "")));
 
-      message.guild.createChannel('Yetkili Odaları', 'category', [{
+    message.guild.createChannel('Hoşgeldin', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`🤜  Hoşgeldiniz  🤛`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Hoşgeldin")))
+
+    message.guild.createChannel('Epic Odalar', 'category', [{
       id: message.guild.id,
     }]);
 
     message.guild.createChannel(`🔒 Yönetim`, "voice")
     .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "Yetkili Odaları")))
+      channel.setParent(message.guild.channels.find(channel => channel.name === "Epic Odalar")))
     .then(c => {
       let role = message.guild.roles.find("name", "@everyone");
-      let role2 = message.guild.roles.find("name", "Yönetici");
+      let role2 = message.guild.roles.find("name", "Kurucu");
+      let role3 = message.guild.roles.find("name", "Yönetici");
       c.overwritePermissions(role, {
           CONNECT: false,
       });
       c.overwritePermissions(role2, {
           CONNECT: true,
       });
+      c.overwritePermissions(role3, {
+          CONNECT: true,
+      });
+  })
+
+  message.guild.createChannel(`🌈 VIP Odası`, "voice")
+  .then(channel =>
+    channel.setParent(message.guild.channels.find(channel => channel.name === "Epic Odalar")))
+  .then(c => {
+    let role = message.guild.roles.find("name", "@everyone");
+    let role3 = message.guild.roles.find("name", "VIP");
+    c.overwritePermissions(role, {
+        CONNECT: true,
+    });    
+    c.overwritePermissions(role, {
+        CONNECT: false,
+    });
+})
+   
+message.guild.createChannel('Sohbet Odaları', 'category', [{
+    id: message.guild.id,
+    }]);
+
+    message.guild.createChannel(`☕ Sohbet Odası`, 'voice')
+    .then(channel =>
+     channel.setParent(message.guild.channels.find(channel => channel.name === "Sohbet Odaları")))
+    message.guild.createChannel(`🎬 Film Odası`, 'voice')
+    .then(channel =>
+     channel.setParent(message.guild.channels.find(channel => channel.name === "Sohbet Odaları")))
+    message.guild.createChannel(`🎵 Müzik Odası`, 'voice')
+    .then(channel =>
+     channel.setParent(message.guild.channels.find(channel => channel.name === "Sohbet Odaları")))
 
 
 message.guild.createChannel('Oyunlar', 'category', [{
@@ -474,6 +455,81 @@ message.guild.createChannel(`🎮》LOL`, 'voice')
     
 }
 });
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
+fs.readdir('./komutlar/', (err, files) => {
+  if (err) console.error(err);
+  log(`${files.length} komut yüklenecek.`);
+  files.forEach(f => {
+    let props = require(`./komutlar/${f}`);
+    log(`Yüklenen komut: ${props.help.name}.`);
+    client.commands.set(props.help.name, props);
+    props.conf.aliases.forEach(alias => {
+      client.aliases.set(alias, props.help.name);
+    });
+  });
+});
+
+client.reload = command => {
+  return new Promise((resolve, reject) => {
+    try {
+      delete require.cache[require.resolve(`./komutlar/${command}`)];
+      let cmd = require(`./komutlar/${command}`);
+      client.commands.delete(command);
+      client.aliases.forEach((cmd, alias) => {
+        if (cmd === command) client.aliases.delete(alias);
+      });
+      client.commands.set(command, cmd);
+      cmd.conf.aliases.forEach(alias => {
+        client.aliases.set(alias, cmd.help.name);
+      });
+      resolve();
+    } catch (e){
+      reject(e);
+    }
+  });
+};
+
+client.load = command => {
+  return new Promise((resolve, reject) => {
+    try {
+      let cmd = require(`./komutlar/${command}`);
+      client.commands.set(command, cmd);
+      cmd.conf.aliases.forEach(alias => {
+        client.aliases.set(alias, cmd.help.name);
+      });
+      resolve();
+    } catch (e){
+      reject(e);
+    }
+  });
+};
+
+client.unload = command => {
+  return new Promise((resolve, reject) => {
+    try {
+      delete require.cache[require.resolve(`./komutlar/${command}`)];
+      let cmd = require(`./komutlar/${command}`);
+      client.commands.delete(command);
+      client.aliases.forEach((cmd, alias) => {
+        if (cmd === command) client.aliases.delete(alias);
+      });
+      resolve();
+    } catch (e){
+      reject(e);
+    }
+  });
+};
+
+client.elevation = message => {
+  if(!message.guild) {
+	return; }
+  let permlvl = 0;
+  if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
+  if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
+  if (message.author.id === ayarlar.sahip) permlvl = 4;
+  return permlvl;
+};
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
