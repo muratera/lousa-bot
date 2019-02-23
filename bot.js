@@ -489,6 +489,32 @@ message.guild.createChannel(`Yoldaş 3`, 'voice')
 
 
 
+    message.guild.createChannel('Lol', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`Dereceli Maç 1`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+message.guild.createChannel(`Dereceli Maç 2`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+message.guild.createChannel(`Dereceli Maç 3`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+message.guild.createChannel(`Ranked Maç 1`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+message.guild.createChannel(`Ranked Maç 2`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+message.guild.createChannel(`Ranked Maç 3`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+ message.guild.createChannel(`Özel Oyun`, 'voice')
+.then(channel =>
+ channel.setParent(message.guild.channels.find(channel => channel.name === "Lol")))
+
 
 
       message.guild.createRole({
@@ -528,7 +554,19 @@ message.guild.createChannel(`Yoldaş 3`, 'voice')
       })
 
       message.guild.createRole({
-        name: 'VIP',
+        name: 'Fortnite',
+        color: '00ffff',
+      })
+      message.guild.createRole({
+        name: 'Lol',
+        color: '00ffff',
+      })
+      message.guild.createRole({
+        name: 'CSGO',
+        color: '00ffff',
+      })
+      message.guild.createRole({
+        name: 'PUBG',
         color: '00ffff',
       })
 
@@ -542,7 +580,7 @@ message.guild.createChannel(`Yoldaş 3`, 'voice')
         color: 'ORANGE',
       })
 
-       message.channel.send("Gerekli Odalar Kuruldu!")
+       message.channel.send("Herşey Tamam Kanka (Yapımcı Emirhan Cem)")
      
     
 }
@@ -744,7 +782,7 @@ message.guild.createChannel(`🎮》LOL`, 'voice')
         color: 'ORANGE',
       })
 
-       message.channel.send("Gerekli Odalar Kuruldu!")
+       message.channel.send("Herşey Tamam Kanka (Yapımcı Emirhan Cem)")
      
     
 }

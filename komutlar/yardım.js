@@ -3,11 +3,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
   let pages = [
-             /*   '**Yardım**\n\n\n' + ' Hey merhaba ben Emirhan botumuz şuanda ilerleme kat ediyor sende bize destek olmak için +davet yazman yeterli. \n \n \n⬅  |  ➡ Bu Emojılere Tıklayarak Sayfayı Değiştirebilirsiniz',
-              '**Ana Komutlar**\n\n\n' + '+**davet =** Botun davet linkini atar. \n+**ping =** Botun pingini gösterir. \n+**roller =** Rolleri gösterir. \n+**yapımcı =** Yapımcıyı gösterir. \n+**yardım =** Bu menüyü gösterir. \n+**yetkilerim =** Yetkilerinizi gösterir.',
-              '**Eğlence Komutları**\n\n\n' + '+**atatürk =** Rastgele bir atatürk resmi atar. \n+**fortnite =** 1 haftalık fortnite statsını gösterir.  \n+**havadurumu =** hava durumunu gösterir. \n+**kaçcm =** Kaç cm olduğunu gösterir.\n+**golat =** gol atar. \n+**korkut =** korku resmi gönderir. \n+**balıktut =** Balık tutarsınız. \n+**zıtrenk =** Avatarınıza zıt renk uygular. \n+**atam =** Profilinize Atatürk efekti uygular. \n+**sniper =** Profilinize sniper efekti uygular. \n+**wasted =** Profilinize wasted efekti verir. \n+**hacked =** Profilinize hacked efekti verir. \n+**sigara =** Sigara içersiniz. \n+**winner =** Profilinize winner efekti verir. \n+**yazıtura =** Rastgele yazı yada tura resmi gönderir. \n+**kasaaç =** Kasa açarsınız. ',
-              '**Müzik Komutları**\n\n\n' + '+**oynat =** İstediğiniz müziği oynatır. \n+**geç =** Bir sonraki müziğe geçer. \n+**kapat =** Müziği kapatır. \n+**ses =** Ses seviyesini ayarlar. \n+**çalınan =** Çalınan müziği gösterir. \n+**durdur =** Müziği durdurur. \n+**devam =** Müziği devam ettirir. \n+**kuyruk =** Müzik kuyruğunu gösterir. ',*/
-              '**Kurulum**\n\n\n ' + '+**sunucukur =** Sunucu İçin Heşeyi Kurar \n+**panelkur =** kaç kişi (toplam üye,üye,bot) olduğunu gösterir',
+              '**Kurulum**\n\n\n ' + '+**genelsw =** Genel Sw Kurar +**oyunsw =** Oyun D Kurar',
               ];
   let page = 1;
 
