@@ -603,64 +603,6 @@ fs.readdir('./komutlar/', (err, files) => {
 
 /////////////////////////////////////////
 
-client.on('message', async message => {
-  const ms = require('ms');
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  let u = message.mentions.users.first() || message.author;
-  if (command === "saldiriyap") {
-  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
-  message.channel.send(`Bot Bilgi Kanallarının kurulumu başlatılsın mı? başlatılacak ise **evet** yazınız.`)
-      if (!message.member.hasPermission(''))
-        if(message.author.id !== "") 
-  return message.channel.send(" Bu Kodu `Yapımcım  Olan Kişi Kullanabilir.");
-      message.channel.awaitMessages(response => response.content === 'evet', {
-        max: 1,
-        time: 10000,
-        errors: ['time'],
-      })
-    .then((collected) => {
-   message.guild.createChannel('|▬▬|ÖNEMLİ KANALLAR|▬▬|', 'category', [{
-  id: message.guild.id,
-  deny: ['']
-}])
-
-
-message.guild.createChannel(`🎮》LOL`, 'voice')
-.then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
- message.guild.createChannel(`🎮》ZULA`, 'voice')
- .then(channel =>
-  channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
- message.guild.createChannel(`🎮》COUNTER STRİKE`, 'voice')
-.then(channel =>
- channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
- message.guild.createChannel(`🎮》PUBG`, 'voice')
- .then(channel =>
-  channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
-  message.guild.createChannel(`🎮》FORTNİTE`, 'voice')
-  .then(channel =>
-   channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
-   message.guild.createChannel(`🎮》MİNECRAFT`, 'voice')
-   .then(channel =>
-    channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
-    message.guild.createChannel(`🎮》ROBLOX`, 'voice')
-    .then(channel =>
-     channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
-     message.guild.createChannel(`🎮》WOLFTEAM`, 'voice')
-     .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|OYUN ODALARI|▬▬|")))
-
-
-
-
-       message.channel.send("Gerekli Odalar Kuruldu!")
-     
-            })   
-    
-}
-});
-
 
 
 //////////////////////////////////////////
