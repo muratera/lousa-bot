@@ -11,6 +11,7 @@ module.exports = client => {
   client.user.setStatus("online");
    var oyun = [
         "/yardım | /davet",
+        "/bağış Aktif!",
         "Sürüm: 0.0.2",
 
     ];
