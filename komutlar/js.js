@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`)
 	if (message.channel.id == kanal) {  
     };
-  let rol = guild.roles.find('name', 'js')
+  let rol = guild.roles.find('name', 'JS </>')
 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla JS rolu Alındı!`)
