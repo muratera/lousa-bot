@@ -1,21 +1,19 @@
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-  let reason = args.slice(1).join(' ');
+  let reason = args.slice(0).join(' ');
   let guild = message.guild
-  let terfiler = guild.channels.find('name', 'başvuru');
-  if (!terfiler) return message.reply('`başvuru` kanalını bulamıyorum.');
-  let user = message.mentions.users.first();
-  if (reason.length < 1) return message.reply('Ne Dilleri Biliyosunuz? (Kodlama)');
-  if (message.mentions.users.size < 1) return message.reply('Isminizi Etiketleyin.').catch(console.error);
+  let terfiler = guild.channels.find('name', 'başvurular');
+  if (!terfiler) return message.reply('`başvurular` kanalını bulamıyorum.');
+  if (reason.length < 1) return message.reply('Ne dil bildiğinizi yazmalısnız.');
   const embed = new Discord.RichEmbed()
     .setColor(0xD97634)
-	.setThumbnail("https://i.hizliresim.com/mJ20o2.jpg")
-    .setTimestamp()
+  .setTimestamp()
     .addField('Durum:', 'Bekleniyor')
-    .addField('Gonderen Kisi:', `${message.author}`)
-    .addField('Dilleri', reason);
-	
+    .addField('Kişi:', `${message.author}`)
+    .addField('Diller', reason);
+	    message.channel.send(`:white_check_mark: Başvurunuz Alındı.`).then
+
 	return guild.channels.get(terfiler.id).sendEmbed(embed);
 };
 
