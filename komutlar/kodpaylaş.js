@@ -1,10 +1,14 @@
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-  let kod = args.slice(0).join('');
-if (kod.length < 1) return message.reply('Kodu Link Yazmalısın');
-  message.delete();
-  message.channel.send(`**:clipboard: Kod Link:\n${kod}**`)
+  let reason = args.slice(0).join(' '); 
+ if (reason.length < 1) return message.reply('Ne dil bildiğinizi yazmalısnız.');
+  const embed = new Discord.RichEmbed()
+    .setColor(0xD97634)
+  .setTimestamp()
+    .addField('Durum:', 'Bekleniyor')
+    .addField('Kişi:', `${message.author}`)
+    .addField('Diller', reason);
 };
 
 exports.conf = {
