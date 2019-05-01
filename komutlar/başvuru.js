@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let reason = args.slice(0).join(' ');
   let guild = message.guild
-  let terfiler = guild.channels.find('name', 'başvurular');
-  if (!terfiler) return message.reply('`başvurular` kanalını bulamıyorum.');
+  let terfiler = guild.channels.find('name', 'bot-log');
+  if (!terfiler) return message.reply('`bot-log` kanalını bulamıyorum.');
   if (reason.length < 1) return message.reply('Ne dil bildiğinizi yazmalısnız.');
   const embed = new Discord.RichEmbed()
     .setColor(0xD97634)
