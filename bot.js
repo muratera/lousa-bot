@@ -187,3 +187,39 @@ const http = require('http');
     }, 280000);
 
 //////////////////////////////////////////
+client.on('message', async message => {
+  const ms = require('ms');
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  let u = message.mentions.users.first() || message.author;
+  if (command === "sunucu-kur") {
+  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  message.channel.send(`Bot Bilgi Kanallarının kurulumu başlatılsın mı? başlatılacak ise **evet** yazınız.`)
+      if (!message.member.hasPermission('ADMINISTRATOR'))
+  return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
+      message.channel.awaitMessages(response => response.content === 'evet', {
+        max: 1,
+        time: 10000,
+        errors: ['time'],
+      })
+    .then((collected) => {
+      message.guild.createChannel(`🏆》Kurucu Odası`, "text")
+      .then(channel =>
+        channel.setParent(message.guild.channels.find(channel => channel.name === "|▬▬|SES KANALLARI|▬▬|")))
+      .then(c => {
+        let role = message.guild.roles.find("name", "@everyone");
+        let role2 = message.guild.roles.find("name", "Kurucu");
+        
+        c.overwritePermissions(role, {
+            CONNECT: false,
+        });
+        c.overwritePermissions(role2, {
+            CONNECT: true,
+            
+        });
+    })
+       message.channel.send("JS Kanalları Kuruldu")
+            })   
+}
+});
+//////////////////////////////////////////
