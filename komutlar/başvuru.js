@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
 
   let reason = args.slice(0).join(' ');
   let basvuru = "568920569093816345"// başvurunun gideceği kanal
-	let kanal = "539169862996590610" // başvurunun yapılacağı kanal
+	let kanal = "579292449588117526" // başvurunun yapılacağı kanal
 	
   if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`).then(msg => msg.delete(10000))
 	if (message.channel.id == kanal) {
