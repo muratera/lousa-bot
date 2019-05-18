@@ -13,11 +13,11 @@ exports.run = function(client, message, args) {
   const embed = new Discord.RichEmbed()
   .setColor("BLUE")
   .setTitle("Başvuru")
-  .addField("Başvuran Kişi", message.author.tag)
+  .addField("Başvuran Kişi", message.author)
   .addField("Başvuran Kişinin ID", message.author.id)
   .addField("Diller", reason)
   client.channels.get(basvuru).send(embed)
-  message.channel.send(`:white_check_mark: Bot ekleme isteğiniz alındı.`).then
+  message.channel.send(`:white_check_mark: Başvurunuz Alındı.`).then
   }
 };
 
