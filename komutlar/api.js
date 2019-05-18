@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
   let user = message.member
   let guild = message.guild
-	let kanal = "539169862996590610" // js rolunun alınıcağı kanal
+	let kanal = "579292449588117526" // js rolunun alınıcağı kanal
   
   if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece #${kanal} kanalında kullanabilirsin.`)
 	if (message.channel.id == kanal) {  
