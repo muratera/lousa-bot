@@ -11,7 +11,7 @@ module.exports = client => {
   client.user.setStatus("online");
    var oyun = [
      
-        "-js | -html",
+        "-js | -html | -api",
      
     ];
 
