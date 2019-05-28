@@ -17,12 +17,12 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["javascript"],
+  aliases: ["javascriptx"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'js',
+  name: 'jsx',
   description: "JS Rolu Almaya Ne Dersin",
   usage: 'js'
 }

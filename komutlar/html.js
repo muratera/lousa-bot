@@ -22,7 +22,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'html',
+  name: 'htmlx',
   description: "html Rolu Almaya Ne Dersin",
   usage: 'html'
 }

@@ -22,7 +22,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'api',
+  name: 'apix',
   description: "html Rolu Almaya Ne Dersin",
   usage: ''
 }
