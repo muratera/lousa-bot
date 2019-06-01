@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
   let user = message.member
   let guild = message.guild
-	let kanal = "579292449588117526" // js rolunun alınıcağı kanal
+	let kanal = "584519785694494723" // js rolunun alınıcağı kanal
   
   if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`)
 	if (message.channel.id == kanal) {  
@@ -17,12 +17,12 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["javascriptx"],
+  aliases: [""],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'jsx',
+  name: '',
   description: "JS Rolu Almaya Ne Dersin",
   usage: 'js'
 }
