@@ -12,6 +12,7 @@ exports.run = async (client, message, args) => {
 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla API rolu Alındı!`)
+  message.delete()
 };
 
 exports.conf = {
