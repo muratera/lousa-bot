@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   let guild = message.guild
 	let kanal = "584519785694494723" // js rolunun alınıcağı kanal
   
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece #${kanal} kanalında kullanabilirsin.`)
+  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece https://discord.gg/qWDXCTD Sunucusunda Kullanabilirsin!`)
 	if (message.channel.id == kanal) {  
     };
   let rol = guild.roles.find('name', 'API')
@@ -17,12 +17,12 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["saas3","kngb5","opqw4","knhaa","cmzss"],
   permLevel: 0
 }
 
 exports.help = {
-  name: '',
+  name: 'kcdvf',
   description: "html Rolu Almaya Ne Dersin",
   usage: ''
 }
