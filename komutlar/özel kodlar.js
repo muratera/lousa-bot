@@ -1,29 +1,34 @@
 const Discord = require('discord.js');
+const DBL = require('dblapi.js')
+const client = new Discord.Client();
 
-exports.run = async (client, message, args) => {
+
+exports.run = (client, message, params) => {
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUzMjI3MjU5NzU1NjAwMjgyOCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTU5NTg5ODI4fQ.KDEZP9r260d8V3pRgRRDUqWTsonn8nzgX_KSNBphEN4', client)
+  dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   let user = message.member
   let guild = message.guild
-	let kanal = "584519785694494723" // js rolunun alınıcağı kanal
-  
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece https://discord.gg/qWDXCTD Sunucusunda Kullanabilirsin!`)
-	if (message.channel.id == kanal) {  
-    };
-  let rol = guild.roles.find('name', 'HTML </>')
+  let rol = guild.roles.find('name', 'Özel Komutlar')
 
   user.addRole(rol)
-  message.channel.send(`${message.author} Başarıyla HTML rolu Alındı!`)
+  message.channel.send(`${message.author} Başarıyla Özel Komutlar rolu Alındı!`)
   message.delete()
-};
 
+} else {
+        message.channel.send(`Bu komutu kullanabilmek için 12 saatte bir https://discordbots.org/bot/532272597556002828/vote sitesinden bota oy vermen gerekiyor. Eğer oy verdiysen onaylanmasını bekle, birkaç dakika sürebilir.`)
+      }
+  });
+}
 exports.conf = {
   enabled: true,
-  guildOnly: true,
-  aliases: ["hahah","12547","csuc1","op159","xrdsz"],
+  guildOnly: false,
+  aliases: ["özelkod","oyverdim"],
   permLevel: 0
-}
+};
 
 exports.help = {
-  name: 'hjhs1',
-  description: "html Rolu Almaya Ne Dersin",
-  usage: 'html'
-}
+  name: 'destek',
+  description: 'Komut açıklaması',
+  usage: 'Komut kullanımı'
+};
