@@ -6,6 +6,7 @@ const client = new Discord.Client();
 exports.run = (client, message, params) => {
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUzMjI3MjU5NzU1NjAwMjgyOCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTU5NTg5ODI4fQ.KDEZP9r260d8V3pRgRRDUqWTsonn8nzgX_KSNBphEN4', client)
   dbl.hasVoted(message.author.id).then(voted => {
+    
       if(voted) {
   let user = message.member
   let guild = message.guild
