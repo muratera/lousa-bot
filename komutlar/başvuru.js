@@ -32,4 +32,4 @@ exports.help = {
   name: 'başvuru', 
   description: "",
   usage: ''
-};
+};  
