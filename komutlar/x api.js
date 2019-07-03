@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   let guild = message.guild
 	let kanal = "595701678360231946" // js rolunun alınıcağı kanal
   
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece https://discord.gg/qWDXCTD Sunucusunda Kullanabilirsin!`)
+if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#595701678360231946> Kanalında Kullanabilirsin!`)
 	if (message.channel.id == kanal) {  
     };
   let rol = guild.roles.find('name', 'API')
