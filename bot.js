@@ -6,17 +6,16 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const moment = require('moment');
 require('./util/eventLoader')(client);
-var prefix = ayarlar.prefix;
-let owner = "387968413013901313";
-
+let owner = ayarlar.sahip;
+const express = require('express');
+const app = express();
+const http = require('http');
 var prefix = ayarlar.prefix;
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
-
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-
 client.login(ayarlar.token);
 client.reload = command => {
   return new Promise((resolve, reject) => {
@@ -37,7 +36,6 @@ client.reload = command => {
     }
   });
 };
-
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -52,7 +50,6 @@ client.load = command => {
     }
   });
 };
-
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -68,7 +65,6 @@ client.unload = command => {
     }
   });
 };
-
 client.elevation = message => {
   if(!message.guild) {
 	return; }
@@ -78,7 +74,6 @@ client.elevation = message => {
   if (message.author.id === ayarlar.sahip) permlvl = 4;
   return permlvl;
 };
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
@@ -93,7 +88,6 @@ fs.readdir('./komutlar/', (err, files) => {
     });
   });
 });
-
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -113,7 +107,6 @@ client.reload = command => {
     }
   });
 };
-
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -128,7 +121,6 @@ client.load = command => {
     }
   });
 };
-
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -144,7 +136,6 @@ client.unload = command => {
     }
   });
 };
-
 client.elevation = message => {
   if(!message.guild) {
 	return; }
@@ -154,9 +145,6 @@ client.elevation = message => {
   if (message.author.id === ayarlar.sahip) permlvl = 4;
   return permlvl;
 };
-
-//////////////////////////////////////////
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
@@ -171,12 +159,6 @@ fs.readdir('./komutlar/', (err, files) => {
     });
   });
 });
-
-/////////////////////////////////////////
-
-const express = require('express');
-const app = express();
-const http = require('http');
     app.get("/", (request, response) => {
     console.log(` Pfffff, Az Önce Bot Ping yedi, Sorun önemli değil merak etme. Hatayı düzelttik.`);
     response.sendStatus(200);
