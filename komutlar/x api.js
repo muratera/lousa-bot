@@ -13,6 +13,9 @@ if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla API rolu Alındı!`)
   message.delete()
+  message.delete()
+  message.delete()
+
 };
 
 exports.conf = {
