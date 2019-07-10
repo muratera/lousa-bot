@@ -12,21 +12,18 @@ if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece 
 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla API rolu Alındı!`)
-  message.delete()
-  message.delete()
-  message.delete()
 
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["saas3","kngb5","opqw4","knhaa","cmzss"],
+  aliases: [],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'kcdvf',
+  name: 'asdqwdasdqwad',
   description: "html Rolu Almaya Ne Dersin",
   usage: ''
 }

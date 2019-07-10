@@ -12,18 +12,17 @@ if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece 
 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla HTML rolu Alındı!`)
-  message.delete()
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["hahah","12547","csuc1","op159","xrdsz","html"],
+  aliases: [],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'hjhs1',
+  name: 'html',
   description: "html Rolu Almaya Ne Dersin",
   usage: 'html'
 }

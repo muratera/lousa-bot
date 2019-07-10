@@ -12,18 +12,17 @@ if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece 
 
   user.addRole(rol)
   message.channel.send(`${message.author} Başarıyla JS rolu Alındı!`)
-  message.delete()
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["qwry1","hyrds","hbjxs","hdc84","asd15","js"],
+  aliases: [],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'zxrq3',
+  name: 'js',
   description: "JS Rolu Almaya Ne Dersin",
   usage: 'js'
 }
