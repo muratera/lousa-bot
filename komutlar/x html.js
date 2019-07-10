@@ -18,7 +18,7 @@ if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["hahah","12547","csuc1","op159","xrdsz"],
+  aliases: ["hahah","12547","csuc1","op159","xrdsz","html"],
   permLevel: 0
 }
 

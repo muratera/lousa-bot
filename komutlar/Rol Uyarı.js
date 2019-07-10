@@ -20,10 +20,10 @@ http://bit.ly/kodukullan Kanki Direk Bu Videoyu İzle
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["js"],
+  aliases: ["jss"],
   permLevel: 4
 };
 
 exports.help = {
-  name: 'html',
+  name: 'htmll',
 };
