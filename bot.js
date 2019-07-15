@@ -5,7 +5,7 @@ const ayarlar = require('./ayarlar.json');
 const fs = require('fs');
 const Jimp = require('jimp');
 const moment = require('moment');
-require('./util/eventLoader')(client);
+require('./events/eventLoader')(client);
 let owner = ayarlar.sahip;
 const express = require('express');
 const app = express();
