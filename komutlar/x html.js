@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
-if (!message.guild) {
-  return message.author.send(`:x: **Bu Komut Bu Sunucuda Devre Dışı https://discord.gg/GsSc7Ne**`); }
-if (message.author.bot === true) {
-  return;
-}
   let user = message.member
   let guild = message.guild
+	let kanal = "595701678360231946" // js rolunun alınıcağı kanal
+  
+if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece https://discord.gg/GsSc7Ne <#595701678360231946> Kanalında Kullanabilirsin!`)
+	if (message.channel.id == kanal) {  
+    };
   let rol = guild.roles.find('name', 'HTML </>')
 
   user.addRole(rol)
