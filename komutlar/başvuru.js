@@ -2,18 +2,17 @@ const Discord = require('discord.js');
 
 
 exports.run = function(client, message, args) {
-  let basvuru = "584519518701879296"
+  let basvuru = "606118453383790602"
   
   let isim = args[0]
   let diller = args[1]
-  let aktiflik = args[2]
-  let kendihakkinda = args.slice(3).join(' ');
+  let kaçkod = args[3]
+  let kendihakkinda = args.slice(4).join(' ');
   
   if (!isim) return message.channel.send(`:no_entry: İsmini Yazmalısın`).then(msg => msg.delete(10000))
   if (!diller) return message.channel.send(`:no_entry: Hangi Kodlama Dilleri bildiğini Yazmalısn!`).then(msg => msg.delete(10000))
-  if (!aktiflik) return message.channel.send(`:no_entry: Günde Kaç Saat Aktif Olduğunu Yazmalısın`).then(msg => msg.delete(10000))
-  if (!) return message.channel.send(`:no_entry: `).then(msg => msg.delete(10000))   
-
+  if (!kaçkod) return message.channel.send(`:no_entry: Kaç Kod Paylşırısn`).then(msg => msg.delete(10000))   
+  if (!kendihakkinda) return message.channel.send(`:no_entry: Seni Neden Seçmemiz Gerektiğini Yazmalısın`).then(msg => msg.delete(10000))
 
   
   
@@ -24,8 +23,8 @@ const embed = new Discord.RichEmbed()
   .addField("Başvuran Kişi", message.author)
   .addField("Başvuran Kişinin ID", message.author.id)
   .addField("İsim", isim, true)
+  .addField("Kod Sayısı", kaçkod, true)
   .addField("Diller", diller, true)
-  .addField("Aktiflik", aktiflik, true)
   .addField("Hakıında", kendihakkinda)
 
 client.channels.get(basvuru).send(embed)
