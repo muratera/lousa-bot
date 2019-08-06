@@ -2,24 +2,38 @@ const Discord = require('discord.js');
 
 
 exports.run = function(client, message, args) {
+  let basvuru = "584519518701879296"
+  
+  let isim = args[0]
+  let diller = args[1]
+  let aktiflik = args[2]
+  let kendihakkinda = args.slice(3).join(' ');
+  
+  if (!isim) return message.channel.send(`:no_entry: İsmini Yazmalısın`).then(msg => msg.delete(10000))
+  if (!diller) return message.channel.send(`:no_entry: Hangi Kodlama Dilleri bildiğini Yazmalısn!`).then(msg => msg.delete(10000))
+  if (!aktiflik) return message.channel.send(`:no_entry: Günde Kaç Saat Aktif Olduğunu Yazmalısın`).then(msg => msg.delete(10000))
+  if (!) return message.channel.send(`:no_entry: `).then(msg => msg.delete(10000))   
 
-  let reason = args.slice(0).join(' ');
-  let basvuru = "584519518701879296"// başvurunun gideceği kanal
-	let kanal = "584844980133036045" // başvurunun yapılacağı kanal
-	
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`).then(msg => msg.delete(10000))
-	if (message.channel.id == kanal) {
-  if (!reason) return message.channel.send(`:no_entry: Hangi Kodlama Dilleri bildiğini Yazmalısn!`).then(msg => msg.delete(10000))
-  const embed = new Discord.RichEmbed()
-  .setColor("BLUE")
+
+  
+  
+  
+const embed = new Discord.RichEmbed()
+  .setColor("GREEN")
   .setTitle("Başvuru")
   .addField("Başvuran Kişi", message.author)
   .addField("Başvuran Kişinin ID", message.author.id)
-  .addField("Diller", reason)
-  client.channels.get(basvuru).send(embed)
-  message.channel.send(`:white_check_mark: Başvurunuz Alındı.`).then
-  }
-};
+  .addField("İsim", isim, true)
+  .addField("Diller", diller, true)
+  .addField("Aktiflik", aktiflik, true)
+  .addField("Hakıında", kendihakkinda)
+
+client.channels.get(basvuru).send(embed)
+  
+    message.channel.send(`:white_check_mark: Başvurunuz Alındı.`).then
+ 
+
+}
 
 exports.conf = {
   enabled: true,
