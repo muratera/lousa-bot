@@ -169,3 +169,7 @@ fs.readdir('./komutlar/', (err, files) => {
     }, 280000);
 
 //////////////////////////////////////////
+
+  client.on('guildMemberAdd', member => {
+  member.send("Selam, Rica Etsem Sunucuma Gelirmisin ?");
+}); 
