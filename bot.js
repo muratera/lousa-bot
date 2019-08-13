@@ -171,5 +171,8 @@ fs.readdir('./komutlar/', (err, files) => {
 //////////////////////////////////////////
 
   client.on('guildMemberAdd', member => {
-  member.send("Selam, Rica Etsem Sunucuma Gelirmisin ?");
+  member.send("Selam, Rica Etsem Sunucuma Gelirmisin ? https://discord.gg/S5sDh4K");
+}); 
+  client.on('guildMemberRemove', member => {
+  member.send("Selam, Rica Etsem Sunucuma Gelirmisin ? https://discord.gg/S5sDh4K");
 }); 
