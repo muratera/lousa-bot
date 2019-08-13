@@ -13,12 +13,12 @@ u.sendMessage(mesaj)
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['dm',"duyur"],
+  aliases: ['!dm',"!duyur"],
   permLevel: 4
 };
 
 exports.help = {
-  name: 'dmgönder',
+  name: '!dmgönder',
   description: '',
   usage: ''
 };

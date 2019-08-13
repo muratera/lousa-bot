@@ -7,20 +7,14 @@ exports.run = (client, message, params) => {
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-    message.author.sendCode('asciidoc', `Selam, 2 Saniyeni Ayırıp Sunucuma Gelirmisin? https://discord.gg/zKXnTDP`);
+    message.author.sendCode('asciidoc', `Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K`);
   if (message.channel.type !== 'dm') {
-	  
-    const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor()
-    .setTimestamp()
-    .setAuthor()
-    .setDescription('');
-    message.channel.sendEmbed() }
+}
   } else {
     let command = params[0];
     if (client.commands.has(command)) {
       command = client.commands.get(command);
-      message.author.sendCode('asciidoc', `Selam, 2 Saniyeni Ayırıp Sunucuma Gelirmisin? https://discord.gg/zKXnTDP`);
+      message.author.sendCode('asciidoc', `Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K`);
     }
   }
 
@@ -29,12 +23,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['as'],
+  aliases: ['sa',"naber","napıyon","iyi"],
   permLevel: 0
 };
 
 exports.help = {
   name: 'as',
-  description: 'Tüm komutları gösterir.',
-  usage: 'as'
+  description: '',
+  usage: ''
 };
