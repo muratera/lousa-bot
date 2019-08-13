@@ -6,7 +6,6 @@ exports.run = (client, message, args) => {
       const mesajat = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setDescription("")
-
       client.users.forEach(u => {
 u.sendEmbed("deneme")
 })
