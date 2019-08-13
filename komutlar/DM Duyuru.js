@@ -1,8 +1,7 @@
-
 const Discord = require('discord.js');
-
 exports.run = (client, message, args) => {
 
+  
     let mesaj = args.slice(0).join(' ');
 if (mesaj.length < 1) return message.channel.send('Özel DM den göndermek İstediğiniz Mesajı Yazınız.');
   
@@ -10,10 +9,11 @@ if (mesaj.length < 1) return message.channel.send('Özel DM den göndermek İste
 u.sendMessage(mesaj)
 })};
 
+
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['dm'],
+  aliases: ['dm',"duyur"],
   permLevel: 4
 };
 
