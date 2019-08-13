@@ -7,12 +7,8 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
   console.log(``)
-  console.log(``)
-  console.log(``)
-  console.log(``)
-  console.log(`Tüm komutlar çalıştırılıyor!`);
-  console.log(`${client.user.username} ismi ile giriş yapıldı! BOT aktif!`);
-  client.user.setStatus("online");
+  console.log(`${client.user.username} İsimli Self Bot Çalışmakta!`);
+  client.user.setStatus("dnd");
    var oyun = [
      
         "",

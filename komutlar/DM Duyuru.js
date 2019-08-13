@@ -1,13 +1,14 @@
-/*
-BU KOMUTU KULLANIRSANIZ VE BOT DEĞİLDE BİR KİŞİNİN TOKENİNİ KULLANIYOSANIZ O KİŞİNİN HESABI DİSCORD TARAFINDAN KAPATILIR!
-*/
+
 const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-client.users.forEach(u => {
-u.sendEmbed("nabıyon bea")
-})
-};
+
+    let mesaj = args.slice(0).join(' ');
+if (mesaj.length < 1) return message.channel.send('Özel DM den göndermek İstediğiniz Mesajı Yazınız.');
+  
+      client.users.forEach(u => {
+u.sendMessage(mesaj)
+})};
 
 exports.conf = {
   enabled: true,
@@ -17,7 +18,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'naberamk',
+  name: 'dmgönder',
   description: '',
   usage: ''
 };
