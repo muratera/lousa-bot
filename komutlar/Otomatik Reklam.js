@@ -1,6 +1,8 @@
+/*
+       Biri bişey yazdığında otomatik dm den reklam yapar
+*/
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
-
 
 exports.run = (client, message, params) => {
 

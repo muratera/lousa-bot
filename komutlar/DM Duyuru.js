@@ -1,3 +1,6 @@
+/*
+          Embedsiz Dm Duyurudur Hesaba Ban Yedirtmez
+*/
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 

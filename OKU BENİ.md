@@ -1,0 +1,1 @@
+Öncelikle hepinize merhabe ben Emir. İstekler üzerine gelişmiş bir seft bot yaptık gayet güzel oldu bence. İnşallah sıkıntısız ku
