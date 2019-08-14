@@ -111,7 +111,6 @@ fs.readdir('./komutlar/', (err, files) => {
 }); 
 
 
-
   client.on('guildMemberRemove', member => {
   member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K");
 }); 
