@@ -1,5 +1,5 @@
 /*
-       Biri bişey yazdığında otomatik dm den reklam yapar
+         Biri bişey yazdığında otomatik dm den reklam yapar
 */
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
