@@ -1,17 +1,14 @@
-
-
 /*
-          Embedsiz Dm Duyurudur Hesaba Ban Yedirtmez
+          Embedsiz Dm Duyuru
 */
-
 
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
-    let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.channel.send('Özel DM den göndermek İstediğiniz Mesajı Yazınız.');
-  
-      client.users.forEach(u => {
+let mesaj = args.slice(0).join(' ')  
+      
+
+    client.users.forEach(u => {
 u.sendMessage(mesaj)
 })};
 
