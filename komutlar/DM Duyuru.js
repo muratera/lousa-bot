@@ -1,10 +1,13 @@
+
+
 /*
           Embedsiz Dm Duyurudur Hesaba Ban Yedirtmez
 */
+
+
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
-  
     let mesaj = args.slice(0).join(' ');
 if (mesaj.length < 1) return message.channel.send('Özel DM den göndermek İstediğiniz Mesajı Yazınız.');
   

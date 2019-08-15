@@ -9,12 +9,11 @@ const fs = require('fs');
 const Jimp = require('jimp');
 const moment = require('moment');
 require('./util/eventLoader')(client);
+let owner = ayarlar.sahip;
 const express = require('express');
 const app = express();
 const http = require('http');
 var prefix = ayarlar.prefix;
-let owner = ayarlar.sahip;
-let token = ("");
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
@@ -75,7 +74,7 @@ client.elevation = message => {
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-  if (message.author.id === owner) permlvl = 4;
+  if (message.author.id === ayarlar.sahip) permlvl = 4;
   return permlvl;
 };
 client.commands = new Discord.Collection();
@@ -156,3 +155,4 @@ client.on("message", async message =>{
 message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
+
