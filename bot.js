@@ -120,7 +120,7 @@ fs.readdir('./komutlar/', (err, files) => {
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'sa') {
-message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
 
@@ -128,7 +128,7 @@ message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'as') {
-message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
 
@@ -136,7 +136,7 @@ message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'naber') {
-message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
 
@@ -144,7 +144,7 @@ message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'iyi') {
-message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
 
@@ -152,7 +152,7 @@ message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'knk') {
-message.author.send("Hey Sen! \nSeni Sunuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
   }
 })
 
