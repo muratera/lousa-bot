@@ -120,25 +120,19 @@ fs.readdir('./komutlar/', (err, files) => {
 
 
   client.on('guildMemberAdd', member => {
-  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K")//Sunucu Linkiniz
+  member.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
 }); 
 
 
 
   client.on('guildMemberRemove', member => {
-  member.send("Selam, Rica Etsem Sunucuma Gelirmisin? https://discord.gg/S5sDh4K")//Sunucu Linkiniz
+  member.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
 }); 
+
 
 
 var s = ["sa","selamun aleyküm","slm","s.a","naber","hg","oç","ananı","sikim","lan"]
 client.on("message", async message =>{
   if (message.content.toLowerCase()=== 'sa') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")//Sunucu Linkiniz
+message.author.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
 }})
-
-
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'sa') {
-message.author.send("Hey Sen! \nSeni Sunucuma Davet Ediyorum \nhttps://discord.gg/S5sDh4K")//Sunucu Linkiniz
-  }
-})
