@@ -118,21 +118,21 @@ fs.readdir('./komutlar/', (err, files) => {
 ////////////////////////////////////////////////////////////////////////////////////
 
 
+client.on("message", msg => {
+  var dm = client.channels.get("721899226883162133"); //mesajın geleceği kanal idsi//
+  if (msg.channel.type === "dm") {
+    if (msg.author.id === client.user.id) return;
+    const botdm = new Discord.RichEmbed()
+      .setTitle(`${client.user.username} Dm`)
+      .setTimestamp()
+      .setColor("BLUE")
+      .setThumbnail(`${msg.author.avatarURL}`)
+      .addField("Gönderen ", msg.author.tag)
+      .addField("Gönderen ID :", msg.author.id)
+      .addField("Gönderilen Mesaj", msg.content);
 
-  client.on('guildMemberAdd', member => {
-  member.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
-}); 
+    dm.send(botdm);
+  }
+  if (msg.channel.bot) return;
+});
 
-
-
-  client.on('guildMemberRemove', member => {
-  member.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
-}); 
-
-
-
-var s = ["sa","selamun aleyküm","slm","s.a","naber","hg","oç","ananı","sikim","lan"]
-client.on("message", async message =>{
-  if (message.content.toLowerCase()=== 'sa') {
-message.author.send("https://discord.gg/S5sDh4K")//Sunucu Linkiniz
-}})
