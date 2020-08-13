@@ -110,7 +110,7 @@ client.on('error', e => {
 
 client.login(ayarlar.token);
 
-///////////////////BOT DM/////////////////////
+///////////////////////////BOT DM//////////////////////
 
 client.on("message", msg => {
   var dm = client.channels.get("721899226883162133"); //mesajın geleceği kanal idsi//
