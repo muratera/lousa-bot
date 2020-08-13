@@ -7,7 +7,6 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
 console.log(`Başarıyla Giriş Yaptım!`);
-client.user.setStatus("dnd"); //dnd = rahatsız etmeyin - idle = boşta - online = çevrimiçim
+client.user.setStatus("idle"); //dnd = rahatsız etmeyin - idle = boşta - online = çevrimiçim
 
-client.user.setActivity("");
-};
+}
