@@ -136,3 +136,8 @@ client.on("message", msg => {
   if (msg.channel.bot) return;
 });
 
+/////////////////SESE SOKMA//////////////////
+
+client.on('ready', ()=>{
+client.channels.get('675104284706209798').join()
+})
