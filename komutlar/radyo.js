@@ -15,7 +15,7 @@ const radyo = {
     fg : "https://onlineradiobox.com/json/tr/fg937/play?platform=web ",
     medya : "https://onlineradiobox.com/json/tr/medya/play?platform=web ",
     polis : "https://m.egm.gov.tr:8093/ ",  
-    rock : "https://rockfm.rockfm.com.tr:9450/stream ",
+    rock : "https://rockfm.rockfm.com.tr:9450/stream ", 
     tgrt : "https://onlineradiobox.com/json/tr/tgrtfm/play?platform=web ",
     joy : "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURKAAC.aac ",
     odtü : "http://stream.radyoodtu.com.tr/canli ",
