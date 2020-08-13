@@ -6,8 +6,8 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["m"],
-  permLevel: 4
+  aliases: [],
+  permLevel: 0
 };
 
 exports.help = {
