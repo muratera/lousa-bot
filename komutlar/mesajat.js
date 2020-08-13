@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
   return message.author.sendEmbed(ozelmesajuyari); }
   let guild = message.guild;
   let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
+  let user = message.users.id();
   if (reason.length < 1) return message.reply('Ne göndericem onuda yazı ver.');
   if (message.mentions.users.size < 1) return message.reply('Kime Mesaj atacam onuda yazı ver.').catch(console.error);
   message.delete();
