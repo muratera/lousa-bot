@@ -19,6 +19,7 @@ const radyo = {
     tgrt : "https://onlineradiobox.com/json/tr/tgrtfm/play?platform=web ",
     joy : "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURKAAC.aac ",
     odtü : "http://stream.radyoodtu.com.tr/canli ",
+    fenomenkarışık : "https://listen.radyofenomen.com/fenomenkarisik/128/icecast.audio",
 }
 
 exports.run = function(bot, message, args) {
@@ -27,7 +28,7 @@ exports.run = function(bot, message, args) {
     if (!message.member.voiceChannel) return message.reply("Sana bağlanmam için ilk önce sesli bir kanala katılmalısın.").then(m => m.delete(15000)).catch(console.error);
     else {
         if (!args[0] || args[0] === "help" || args[0] === "yardım") {
-            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵  \n  \n 1 = Fenomen \n 2 = FenomenTürk \n 3 = KralPop \n 4 = Virgin Radio\n 5 = Number1\n 6 = Radyo 45'lik \n 7 = İstanbul'un Sesi \n 8 = Aral FM \n 9 = Radyo Turkuvaz \n 10 = Radyo FG \n 11 = Medya FM \n 12 = Polis Radyosu \n 13 = Rock FM \n 14 = TGRT FM \n 15 = Joy Türk \n 16 = Radyo ODTÜ \n \n Açmak İçin t.radyo <numara> \n Kapatmak İçin t.radyo kapat**").then(m => m.delete(40000)).catch(console.error);
+            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵  \n  \n 1 = Fenomen \n 2 = FenomenTürk \n 3 = KralPop \n 4 = Virgin Radio\n 5 = Number1\n 6 = Radyo 45'lik \n 7 = İstanbul'un Sesi \n 8 = Aral FM \n 9 = Radyo Turkuvaz \n 10 = Radyo FG \n 11 = Medya FM \n 12 = Polis Radyosu \n 13 = Rock FM \n 14 = TGRT FM \n 15 = Joy Türk \n 16 = Radyo ODTÜ \n 17 = Fenomen Karışık \n \n Açmak İçin t.radyo <numara> \n Kapatmak İçin t.radyo kapat**").then(m => m.delete(40000)).catch(console.error);
         } else if (args[0].toLowerCase() === "fenomen" || args[0] === "1") {
             message.member.voiceChannel.join().then(connection => {
                 var dispatcher = connection.playStream(radyo.fenomen);
@@ -111,8 +112,13 @@ exports.run = function(bot, message, args) {
             } else if (args[0].toLowerCase() === "Radyo ODTÜ" || args[0] === "16") {
              message.member.voiceChannel.join().then(connection => {
                var dispatcher = connection.playStream(radyo.odtü);
-               message.reply("🎧 | **Başarılı! `Radyo Odtü` çalınıyor.** `Radyo 2 Saniye Sonra Açılıyor`");
-            })
+               message.reply("🎧 | **Başarılı! `Radyo Odtü` çalınıyor.** `Radyo 2 Saniye Sonra Açılıyor`")
+            })  
+            } else if (args[0].toLowerCase() === "Radyo ODTÜ" || args[0] === "17") {
+             message.member.voiceChannel.join().then(connection => {
+               var dispatcher = connection.playStream(radyo.fenomenkarışık);
+               message.reply("🎧 | **Başarılı! `Fenomen Karışık` çalınıyor.** `Radyo 2 Saniye Sonra Açılıyor`")
+            })  
     }
     }
     }
