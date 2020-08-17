@@ -133,5 +133,5 @@ client.on("message", msg => {
 //////////////////SESE SOKMA////////////////
 
 client.on('ready', ()=>{
-client.channels.get('675099405447331840').join()
+client.channels.get('675104284706209798').join()
 })   
